@@ -83,11 +83,13 @@ Restart n8n to load the new nodes.
 You'll need an API key from your Pterodactyl Panel:
 
 **For Client API (user operations):**
+
 - Go to Account Settings → API Credentials
 - Create a new API key
 - Copy the key immediately
 
 **For Application API (admin operations):**
+
 - Go to Admin Panel → Application API
 - Create a new API key with appropriate permissions
 - Copy the key immediately
@@ -111,6 +113,7 @@ Create a workflow to list your servers and check their status.
 ### Client API Operations
 
 **Server Management**
+
 - List all your servers
 - Get server details and resource usage
 - Control server power (start, stop, restart)
@@ -118,54 +121,64 @@ Create a workflow to list your servers and check their status.
 - Monitor real-time resource usage
 
 **File Operations**
+
 - Browse and manage server files
 - Read and write file contents
 - Create archives and extract files
 - Get secure upload URLs
 
 **Database Management**
+
 - List and create databases
 - Rotate passwords
 - Delete databases when needed
 
 **Backup Operations**
+
 - Create and restore backups
 - Download backup archives
 - Manage backup retention
 
 **Account & Access**
+
 - Manage your account settings
 - Control API keys
 - Manage subuser permissions
 - Configure server schedules
 
 **Network**
+
 - View and manage IP allocations
 - Set primary allocation
 
 ### Application API Operations (Admin)
 
 **User Management**
+
 - Create and manage user accounts
 - View user details and their servers
 
 **Server Provisioning**
+
 - Create new game servers
 - Update server configurations
 - Remove servers
 
 **Infrastructure**
+
 - Manage datacenter locations
 
 ### WebSocket Features
 
 **Real-Time Monitoring**
+
 - Stream console output
 - Get live resource statistics
 - React to server status changes
 - Track installation progress
 
 **Connection Management**
+
 - Automatic reconnection on disconnect
 - Token refresh handling
 - Graceful error recovery
@@ -261,6 +274,7 @@ Use for: User management, server creation, admin tasks
 6. Copy the key (shown only once!)
 
 **Tips:**
+
 - Use Client API for most automation tasks
 - Only use Application API when you need admin privileges
 - Create separate keys for different workflows
@@ -273,21 +287,25 @@ Use for: User management, server creation, admin tasks
 ### Common Issues
 
 **Can't connect to Panel**
+
 - Check that your Panel URL is correct (e.g., `https://panel.example.com`)
 - Remove any trailing slashes from the URL
 - Verify the panel is accessible from your n8n instance
 
 **API Key not working**
+
 - Make sure you copied the entire key
 - Check if the key was revoked in the panel
 - Verify you're using the right credential type (Client vs Application)
 
 **WebSocket won't connect**
+
 - Ensure Wings is running on the server
 - Check firewall rules allow WebSocket connections
 - Verify the server ID is correct
 
 **"ConfigurationNotPersistedException" warning**
+
 - This is usually harmless - it means Wings couldn't sync immediately
 - The operation succeeded on the Panel
 - Wings will sync when it comes back online
@@ -304,12 +322,14 @@ Use for: User management, server creation, admin tasks
 ## Compatibility
 
 **Requirements:**
+
 - n8n v0.198.0 or higher
 - Pterodactyl Panel v1.0 or higher
 - Wings v1.0 or higher (for WebSocket features)
 - Node.js v18.10.0 or higher
 
 **Tested with:**
+
 - n8n 1.x
 - Pterodactyl Panel 1.11.x
 - Self-hosted and n8n Cloud
@@ -322,6 +342,7 @@ Use for: User management, server creation, admin tasks
 ### Dynamic Dropdowns
 
 Many operations include dropdowns that load data from your panel:
+
 - Server selection shows your accessible servers
 - User selection (Application API)
 - Location selection
@@ -330,12 +351,14 @@ Many operations include dropdowns that load data from your panel:
 ### Pagination
 
 List operations handle pagination automatically:
+
 - Enable "Return All" to fetch everything
 - Or set a limit for faster queries
 
 ### Error Handling
 
 Error handling features:
+
 - Retries on HTTP 429 (rate limit) and 5xx responses
 - ConfigurationNotPersistedException logged as warning instead of error
 - WebSocket reconnection with exponential backoff
