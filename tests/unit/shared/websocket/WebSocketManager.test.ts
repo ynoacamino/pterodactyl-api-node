@@ -956,7 +956,8 @@ describe('PterodactylWebSocketManager', () => {
 
 	describe('Token Refresh Edge Cases', () => {
 		test('should handle token refresh failure and close connection', async () => {
-			const failingTokenFetch = jest.fn()
+			const failingTokenFetch = jest
+				.fn()
 				.mockResolvedValueOnce({
 					socket: 'wss://wings.test/socket',
 					token: tokenResponses.valid.socket,

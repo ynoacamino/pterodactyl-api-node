@@ -53,13 +53,17 @@ export class EventBatcher {
 		if (!this.emitFn) {
 			this.emitFn = emitFn;
 		} else if (this.emitFn !== emitFn) {
-			console.warn('[EventBatcher] Different emit function provided - using first registered function');
+			console.warn(
+				'[EventBatcher] Different emit function provided - using first registered function',
+			);
 		}
 
 		// Add event to buffer
 		if (this.discardExcess && this.buffer.length >= this.maxBurst) {
 			// Buffer is full - discard excess events
-			console.log(`[EventBatcher] Discarding event: ${event.event} (buffer full at ${this.buffer.length}/${this.maxBurst})`);
+			console.log(
+				`[EventBatcher] Discarding event: ${event.event} (buffer full at ${this.buffer.length}/${this.maxBurst})`,
+			);
 			return;
 		}
 
@@ -79,7 +83,7 @@ export class EventBatcher {
 
 		// Take up to maxBurst events from buffer
 		const eventsToEmit = this.buffer.splice(0, this.maxBurst);
-		
+
 		this.lastEmit = Date.now();
 		this.emitFn(eventsToEmit);
 
