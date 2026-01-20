@@ -1066,9 +1066,7 @@ export class PterodactylClient implements INodeType {
 				}
 			},
 
-			async getAvailablePermissions(
-				this: ILoadOptionsFunctions,
-			): Promise<INodePropertyOptions[]> {
+			async getAvailablePermissions(this: ILoadOptionsFunctions): Promise<INodePropertyOptions[]> {
 				try {
 					const { pterodactylApiRequest } = await import('../../shared/transport');
 					const response = await pterodactylApiRequest.call(
@@ -1088,7 +1086,11 @@ export class PterodactylClient implements INodeType {
 					// Flatten permissions object into array of options
 					// API returns: { category: { description: '...', keys: { permission: 'desc', ... } } }
 					for (const [category, categoryData] of Object.entries(permissions)) {
-						if (typeof categoryData === 'object' && categoryData !== null && 'keys' in categoryData) {
+						if (
+							typeof categoryData === 'object' &&
+							categoryData !== null &&
+							'keys' in categoryData
+						) {
 							const keys = (categoryData as any).keys || {};
 							for (const permission of Object.keys(keys)) {
 								options.push({

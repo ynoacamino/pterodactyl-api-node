@@ -95,48 +95,49 @@ export class PterodactylWebsocketTrigger implements INodeType {
 						description: 'Whether to include the raw WebSocket message in the output',
 					},
 					{
-					displayName: 'Enable Event Batching',
-					name: 'throttleEnabled',
-					type: 'boolean',
-					default: true,
-					description:
-						'Whether to batch high-frequency events to reduce workflow executions and improve performance',
+						displayName: 'Enable Event Batching',
+						name: 'throttleEnabled',
+						type: 'boolean',
+						default: true,
+						description:
+							'Whether to batch high-frequency events to reduce workflow executions and improve performance',
 					},
 					{
-					displayName: 'Batch Interval (ms)',
-					name: 'throttleInterval',
-					type: 'number',
-					default: 100,
-					displayOptions: {
-						show: {
-							throttleEnabled: [true],
+						displayName: 'Batch Interval (ms)',
+						name: 'throttleInterval',
+						type: 'number',
+						default: 100,
+						displayOptions: {
+							show: {
+								throttleEnabled: [true],
+							},
 						},
-					},
-					description: 'How often to emit batched events (in milliseconds)',
+						description: 'How often to emit batched events (in milliseconds)',
 					},
 					{
-					displayName: 'Events Per Batch',
-					name: 'throttleMaxBurst',
-					type: 'number',
-					default: 10,
-					displayOptions: {
-						show: {
-							throttleEnabled: [true],
+						displayName: 'Events Per Batch',
+						name: 'throttleMaxBurst',
+						type: 'number',
+						default: 10,
+						displayOptions: {
+							show: {
+								throttleEnabled: [true],
+							},
 						},
-					},
-					description: 'Maximum number of events to include in each batch',
+						description: 'Maximum number of events to include in each batch',
 					},
 					{
-					displayName: 'Discard Excess Events',
-					name: 'discardExcess',
-					type: 'boolean',
-					default: false,
-					displayOptions: {
-						show: {
-							throttleEnabled: [true],
+						displayName: 'Discard Excess Events',
+						name: 'discardExcess',
+						type: 'boolean',
+						default: false,
+						displayOptions: {
+							show: {
+								throttleEnabled: [true],
+							},
 						},
-					},
-					description: 'Whether to discard events exceeding batch size instead of queuing them for the next batch',
+						description:
+							'Whether to discard events exceeding batch size instead of queuing them for the next batch',
 					},
 					{
 						displayName: 'Auto Reconnect',
