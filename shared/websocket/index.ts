@@ -2,6 +2,6 @@
  * Pterodactyl WebSocket utilities
  */
 
-export { PterodactylWebSocketManager } from './WebSocketManager';
-export { EventBatcher } from './EventBatcher';
-export * from './WebSocketTypes';
+export { EventBatcher } from "./EventBatcher";
+export { PterodactylWebSocketManager } from "./WebSocketManager";
+export * from "./WebSocketTypes";

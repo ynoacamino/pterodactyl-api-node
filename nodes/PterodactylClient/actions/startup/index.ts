@@ -1,2 +1,2 @@
-export * from './getStartupVariables.operation';
-export * from './updateStartupVariable.operation';
+export * from "./getStartupVariables.operation";
+export * from "./updateStartupVariable.operation";

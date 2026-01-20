@@ -1,34 +1,16 @@
 {
-	"name": "n8n-nodes-pterodactyl",
-	"version": "1.3.4",
-	"description": "n8n node for Pterodactyl Panel API integration",
-	"keywords": [
-		"n8n-community-node-package",
-		"pterodactyl",
-		"game-server",
-		"automation",
-		"api"
-	],
+	"name": "n8n-ender-pterodactyl",
+	"version": "1.0.0",
+	"description": "custom n8n nodes for interacting with custom pterodactyl panels via api and websockets",
 	"license": "MIT",
-	"homepage": "https://github.com/goevexx/pterodactyl-api-node",
-	"author": {
-		"name": "Nicolas Morawietz",
-		"email": "contact@morawietz.dev"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/goevexx/pterodactyl-api-node.git"
-	},
-	"bugs": {
-		"url": "https://github.com/goevexx/pterodactyl-api-node/issues"
-	},
 	"main": "index.js",
 	"scripts": {
 		"build": "tsc && gulp build:icons",
 		"dev": "tsc --watch",
-		"format": "prettier --write .",
-		"lint": "eslint . --ext .ts",
-		"lintfix": "eslint . --ext .ts --fix",
+		"format": "biome format --write .",
+		"lint": "biome lint .",
+		"lintfix": "biome lint --write .",
+		"check": "biome check --write .",
 		"test": "jest",
 		"test:watch": "jest --watch",
 		"test:cov": "jest --coverage"
@@ -63,18 +45,13 @@
 		]
 	},
 	"devDependencies": {
+		"@biomejs/biome": "2.3.11",
 		"@types/jest": "^29.5.0",
 		"@types/node": "^20.0.0",
 		"@types/ws": "^8.18.1",
-		"@typescript-eslint/eslint-plugin": "^6.21.0",
-		"@typescript-eslint/parser": "^6.0.0",
-		"eslint": "^8.0.0",
-		"eslint-config-prettier": "^9.0.0",
-		"eslint-plugin-n8n-nodes-base": "^1.0.0",
 		"gulp": "^4.0.2",
 		"jest": "^29.0.0",
 		"n8n-workflow": "^1.0.0",
-		"prettier": "^3.0.0",
 		"ts-jest": "^29.0.0",
 		"typescript": "~5.2.0",
 		"yaml": "^2.8.1"
