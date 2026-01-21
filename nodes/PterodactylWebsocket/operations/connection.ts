@@ -66,7 +66,7 @@ export async function executeTestConnection(
 ): Promise<INodeExecutionData[]> {
   const serverId = this.getNodeParameter("serverId", index) as string;
 
-  const credentials = await this.getCredentials("pterodactylClientApi", index);
+  const credentials = await this.getCredentials("enderPterodactylClientApi", index);
   const panelUrl = credentials.panelUrl as string;
   const apiKey = credentials.apiKey as string;
 
@@ -148,7 +148,7 @@ export async function executeSendAuth(
 ): Promise<INodeExecutionData[]> {
   const serverId = this.getNodeParameter("serverId", index) as string;
 
-  const credentials = await this.getCredentials("pterodactylClientApi", index);
+  const credentials = await this.getCredentials("enderPterodactylClientApi", index);
   const panelUrl = credentials.panelUrl as string;
   const apiKey = credentials.apiKey as string;
 

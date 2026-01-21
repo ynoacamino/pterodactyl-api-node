@@ -141,7 +141,7 @@ export async function executeSetState(
   const serverId = this.getNodeParameter("serverId", index) as string;
   const powerAction = this.getNodeParameter("powerAction", index) as string;
 
-  const credentials = await this.getCredentials("pterodactylClientApi", index);
+  const credentials = await this.getCredentials("enderPterodactylClientApi", index);
   const panelUrl = credentials.panelUrl as string;
   const apiKey = credentials.apiKey as string;
 
@@ -232,7 +232,7 @@ export async function executeSendCommand(
     5000,
   ) as number;
 
-  const credentials = await this.getCredentials("pterodactylClientApi", index);
+  const credentials = await this.getCredentials("enderPterodactylClientApi", index);
   const panelUrl = credentials.panelUrl as string;
   const apiKey = credentials.apiKey as string;
 

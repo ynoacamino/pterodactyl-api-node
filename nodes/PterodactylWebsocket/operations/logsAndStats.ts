@@ -93,7 +93,7 @@ export async function executeRequestLogs(
   const lineLimit = this.getNodeParameter("lineLimit", index, 100) as number;
   const timeout = this.getNodeParameter("timeout", index, 5000) as number;
 
-  const credentials = await this.getCredentials("pterodactylClientApi", index);
+  const credentials = await this.getCredentials("enderPterodactylClientApi", index);
   const panelUrl = credentials.panelUrl as string;
   const apiKey = credentials.apiKey as string;
 
@@ -180,7 +180,7 @@ export async function executeRequestStats(
   const serverId = this.getNodeParameter("serverId", index) as string;
   const timeout = this.getNodeParameter("timeout", index, 5000) as number;
 
-  const credentials = await this.getCredentials("pterodactylClientApi", index);
+  const credentials = await this.getCredentials("enderPterodactylClientApi", index);
   const panelUrl = credentials.panelUrl as string;
   const apiKey = credentials.apiKey as string;
 

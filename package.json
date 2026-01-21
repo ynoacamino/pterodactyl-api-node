@@ -1,6 +1,6 @@
 {
-  "name": "n8n-ender-pterodactyl",
-  "version": "1.0.0",
+  "name": "n8n-nodes-ender-pterodactyl",
+  "version": "1.0.5",
   "description": "custom n8n nodes for interacting with custom pterodactyl panels via api and websockets",
   "license": "MIT",
   "main": "index.js",
@@ -39,15 +39,14 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/credentials/PterodactylClientApi.credentials.js",
-      "dist/credentials/PterodactylApplicationApi.credentials.js"
+      "dist/credentials/EnderPterodactylClientApi.credentials.js",
+      "dist/credentials/EnderPterodactylApplicationApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/Pterodactyl/Pterodactyl.node.js",
-      "dist/nodes/PterodactylClient/PterodactylClient.node.js",
-      "dist/nodes/PterodactylApplication/PterodactylApplication.node.js",
-      "dist/nodes/PterodactylWebsocketTrigger/PterodactylWebsocketTrigger.trigger.node.js",
-      "dist/nodes/PterodactylWebsocket/PterodactylWebsocket.node.js",
+      "dist/nodes/PterodactylClient/EnderPterodactylClient.node.js",
+      "dist/nodes/PterodactylApplication/EnderPterodactylApplication.node.js",
+      "dist/nodes/PterodactylWebsocketTrigger/EnderPterodactylWebsocketTrigger.trigger.node.js",
+      "dist/nodes/PterodactylWebsocket/EnderPterodactylWebsocket.node.js",
       "dist/nodes/PterodactylApplicationTool/PterodactylServerManagementTool.node.js",
       "dist/nodes/PterodactylApplicationTool/PterodactylUserManagementTool.node.js",
       "dist/nodes/PterodactylApplicationTool/PterodactylLocationManagementTool.node.js",
@@ -59,7 +58,8 @@
       "dist/nodes/PterodactylClientTool/PterodactylNetworkManagementTool.node.js",
       "dist/nodes/PterodactylClientTool/PterodactylScheduleManagementTool.node.js",
       "dist/nodes/PterodactylClientTool/PterodactylStartupManagementTool.node.js",
-      "dist/nodes/PterodactylClientTool/PterodactylSubuserManagementTool.node.js"
+      "dist/nodes/PterodactylClientTool/PterodactylSubuserManagementTool.node.js",
+      "dist/nodes/PterodactylClientTool/PterodactylDatabaseManagementTool.node.js"
     ]
   },
   "devDependencies": {

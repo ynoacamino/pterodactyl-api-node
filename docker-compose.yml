@@ -14,8 +14,8 @@ services:
       - TZ=UTC
     volumes:
       # Mount the built node files
-      - ./dist:/data/custom/n8n-nodes-pterodactyl/dist:ro
-      - ./package.json:/data/custom/n8n-nodes-pterodactyl/package.json:ro
+      - ./dist:/data/custom/n8n-nodes-ender-pterodactyl/dist:ro
+      - ./package.json:/data/custom/n8n-nodes-ender-pterodactyl/package.json:ro
       # Persistent data
       - n8n_data:/home/node/.n8n
     restart: unless-stopped

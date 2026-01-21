@@ -89,10 +89,10 @@ import {
   updateUserOperation,
 } from "./actions/user";
 
-export class PterodactylApplication implements INodeType {
+export class EnderPterodactylApplication implements INodeType {
   description: INodeTypeDescription = {
-    displayName: "Pterodactyl Application",
-    name: "pterodactylApplication",
+    displayName: "Ender Pterodactyl Application",
+    name: "enderPterodactylApplication",
     icon: "file:pterodactylApplication.svg",
     group: ["transform"],
     version: 1,
@@ -100,13 +100,13 @@ export class PterodactylApplication implements INodeType {
     description:
       "Administrative panel management with Pterodactyl Panel Application API",
     defaults: {
-      name: "Pterodactyl Application",
+      name: "Ender Pterodactyl Application",
     },
     inputs: ["main"],
     outputs: ["main"],
     credentials: [
       {
-        name: "pterodactylApplicationApi",
+        name: "enderPterodactylApplicationApi",
         required: true,
       },
     ],

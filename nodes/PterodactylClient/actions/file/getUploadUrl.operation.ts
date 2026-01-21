@@ -40,7 +40,7 @@ export async function getUploadUrl(
 ): Promise<any> {
   // Verify Client API credentials are configured
   try {
-    await this.getCredentials("pterodactylClientApi", index);
+    await this.getCredentials("enderPterodactylClientApi", index);
   } catch {
     throw new Error(
       "Get Upload URL operation requires Client API credentials. Please configure and select Client API credentials.",

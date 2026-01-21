@@ -15,23 +15,23 @@ import {
   type WebSocketTokenResponse,
 } from "../../shared/websocket";
 
-export class PterodactylWebsocketTrigger implements INodeType {
+export class EnderPterodactylWebsocketTrigger implements INodeType {
   description: INodeTypeDescription = {
-    displayName: "Pterodactyl WebSocket Trigger",
-    name: "pterodactylWebsocketTrigger",
+    displayName: "Ender Pterodactyl WebSocket Trigger",
+    name: "enderPterodactylWebsocketTrigger",
     icon: "file:pterodactylWebsocketTrigger.svg",
     group: ["trigger"],
     version: 1,
     description:
       "Triggers on Pterodactyl WebSocket events (server status, console output, stats)",
     defaults: {
-      name: "Pterodactyl WebSocket Trigger",
+      name: "Ender Pterodactyl WebSocket Trigger",
     },
     inputs: [],
     outputs: ["main"],
     credentials: [
       {
-        name: "pterodactylClientApi",
+        name: "enderPterodactylClientApi",
         required: true,
       },
     ],
@@ -229,7 +229,7 @@ export class PterodactylWebsocketTrigger implements INodeType {
     const maxReconnectAttempts = (options.maxReconnectAttempts as number) || 5;
 
     // Get credentials
-    const credentials = await this.getCredentials("pterodactylClientApi");
+    const credentials = await this.getCredentials("enderPterodactylClientApi");
     const panelUrl = credentials.panelUrl as string;
     const apiKey = credentials.apiKey as string;
 

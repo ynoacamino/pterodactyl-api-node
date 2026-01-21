@@ -45,7 +45,7 @@ export async function deleteDatabase(
 ): Promise<any> {
   // Verify Client API credentials are configured
   try {
-    await this.getCredentials("pterodactylClientApi", index);
+    await this.getCredentials("enderPterodactylClientApi", index);
   } catch {
     throw new Error(
       "Delete Database operation requires Client API credentials. Please configure and select Client API credentials.",

@@ -129,10 +129,10 @@ import {
   updateSubuserOperation,
 } from "./actions/subuser";
 
-export class PterodactylClient implements INodeType {
+export class EnderPterodactylClient implements INodeType {
   description: INodeTypeDescription = {
-    displayName: "Pterodactyl Client",
-    name: "pterodactylClient",
+    displayName: "Ender Pterodactyl Client",
+    name: "enderPterodactylClient",
     icon: "file:pterodactylClient.svg",
     group: ["transform"],
     version: 1,
@@ -140,13 +140,13 @@ export class PterodactylClient implements INodeType {
     description:
       "User-level server management with Pterodactyl Panel Client API",
     defaults: {
-      name: "Pterodactyl Client",
+      name: "Ender Pterodactyl Client",
     },
     inputs: ["main"],
     outputs: ["main"],
     credentials: [
       {
-        name: "pterodactylClientApi",
+        name: "enderPterodactylClientApi",
         required: true,
       },
     ],

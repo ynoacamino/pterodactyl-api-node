@@ -1,8 +1,10 @@
 {
-  "node": "n8n-nodes-base.pterodactylClient",
+  "node": "n8n-nodes-base.enderPterodactylApplication",
   "nodeVersion": "1.0",
   "codexVersion": "1.0",
-  "categories": ["Development"],
+  "categories": [
+    "Development"
+  ],
   "resources": {
     "credentialDocumentation": [
       {

@@ -18,23 +18,23 @@ import {
   serverControlOperations,
 } from "./operations";
 
-export class PterodactylWebsocket implements INodeType {
+export class EnderPterodactylWebsocket implements INodeType {
   description: INodeTypeDescription = {
-    displayName: "Pterodactyl WebSocket",
-    name: "pterodactylWebsocket",
+    displayName: "Ender Pterodactyl WebSocket",
+    name: "enderPterodactylWebsocket",
     icon: "file:pterodactylWebsocket.svg",
     group: ["transform"],
     version: 1,
     subtitle: '={{$parameter["operation"] + ": " + $parameter["resource"]}}',
     description: "Send commands via Pterodactyl WebSocket API",
     defaults: {
-      name: "Pterodactyl WebSocket",
+      name: "Ender Pterodactyl WebSocket",
     },
     inputs: ["main"],
     outputs: ["main"],
     credentials: [
       {
-        name: "pterodactylClientApi",
+        name: "enderPterodactylClientApi",
         required: true,
       },
     ],

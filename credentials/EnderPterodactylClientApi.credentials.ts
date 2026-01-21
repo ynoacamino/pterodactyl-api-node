@@ -5,9 +5,9 @@ import type {
   INodeProperties,
 } from "n8n-workflow";
 
-export class PterodactylClientApi implements ICredentialType {
-  name = "pterodactylClientApi";
-  displayName = "Pterodactyl Client API";
+export class EnderPterodactylClientApi implements ICredentialType {
+  name = "enderPterodactylClientApi";
+  displayName = "Ender Pterodactyl Client API";
   documentationUrl = "https://pterodactyl.io/api/";
   properties: INodeProperties[] = [
     {

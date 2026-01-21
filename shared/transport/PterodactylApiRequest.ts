@@ -23,8 +23,8 @@ export async function pterodactylApiRequest(
   // Get credentials based on API base - dynamic credential type selection
   const credentialType =
     apiBase === "/api/client"
-      ? "pterodactylClientApi"
-      : "pterodactylApplicationApi";
+      ? "enderPterodactylClientApi"
+      : "enderPterodactylApplicationApi";
 
   let credentials: any;
   try {
