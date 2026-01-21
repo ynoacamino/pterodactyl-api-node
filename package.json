@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-ender-pterodactyl",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "custom n8n nodes for interacting with custom pterodactyl panels via api and websockets",
   "license": "MIT",
   "main": "index.js",
