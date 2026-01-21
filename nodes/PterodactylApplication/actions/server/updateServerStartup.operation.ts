@@ -366,9 +366,7 @@ export async function updateServerStartup(
     body.image = dockerImageInput;
   }
 
-  if (skipScripts) {
-    body.skip_scripts = true;
-  }
+  body.skip_scripts = skipScripts;
 
   const response = await pterodactylApiRequest.call(
     this,
