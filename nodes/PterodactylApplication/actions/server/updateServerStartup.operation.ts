@@ -61,26 +61,8 @@ export const updateServerStartupOperation: INodeProperties[] = [
 
   // ========== Startup Command ==========
   {
-    displayName: "Startup Command Preview",
-    name: "startupPreview",
-    type: "options",
-    typeOptions: {
-      loadOptionsMethod: "getServerStartupCommand",
-      loadOptionsDependsOn: ["serverId", "egg"],
-    },
-    displayOptions: {
-      show: {
-        resource: ["server"],
-        operation: ["updateStartup"],
-      },
-    },
-    default: "",
-    description:
-      "Read-only preview. Shows [Current] server startup command, or [New Egg Default] if you select a new egg above. To override, use the field below.",
-  },
-  {
-    displayName: "Override Startup Command",
-    name: "startup",
+    displayName: "Startup Command",
+    name: "startupCommand",
     type: "string",
     typeOptions: {
       rows: 2,
@@ -94,11 +76,24 @@ export const updateServerStartupOperation: INodeProperties[] = [
     },
     default: "",
     description:
-      "Override the startup command. Leave empty to keep current/egg default shown above. Type Pterodactyl variables like {{SERVER_MEMORY}} directly (no expression mode). In expressions, escape braces: {{ '\\{\\{SERVER_MEMORY\\}\\}' }}",
+      "Override the startup command. Leave empty to keep current/egg default. Type Pterodactyl variables like {{SERVER_MEMORY}} directly (no expression mode). In expressions, escape braces: {{ '\\{\\{SERVER_MEMORY\\}\\}' }}",
     placeholder:
       "Leave empty for current/egg default, or: java -Xmx{{SERVER_MEMORY}}M -jar {{SERVER_JARFILE}}",
   },
-
+  {
+    displayName: "Skip Scripts",
+    name: "skipScripts",
+    type: "boolean",
+    displayOptions: {
+      show: {
+        resource: ["server"],
+        operation: ["updateStartup"],
+      },
+    },
+    default: false,
+    description:
+      "Whether to skip running install/startup scripts when changing egg or startup command. Useful for advanced users who want to manually manage server files.",
+  },
   // ========== Environment Variables ==========
   {
     displayName: "Environment Variables",
@@ -189,7 +184,16 @@ export async function updateServerStartup(
     index,
     "",
   ) as string;
-  const startupInput = this.getNodeParameter("startup", index, "") as string;
+  const startupInput = this.getNodeParameter(
+    "startupCommand",
+    index,
+    "",
+  ) as string;
+  const skipScripts = this.getNodeParameter(
+    "skipScripts",
+    index,
+    false,
+  ) as boolean;
   const environmentCollection = this.getNodeParameter(
     "environment",
     index,
@@ -360,6 +364,10 @@ export async function updateServerStartup(
   // Handle docker image
   if (dockerImageInput) {
     body.image = dockerImageInput;
+  }
+
+  if (skipScripts) {
+    body.skip_scripts = true;
   }
 
   const response = await pterodactylApiRequest.call(
