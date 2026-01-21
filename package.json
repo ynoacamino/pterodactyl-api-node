@@ -1,68 +1,68 @@
 {
-	"name": "n8n-ender-pterodactyl",
-	"version": "1.0.0",
-	"description": "custom n8n nodes for interacting with custom pterodactyl panels via api and websockets",
-	"license": "MIT",
-	"main": "index.js",
-	"scripts": {
-		"build": "tsc && gulp build:icons",
-		"dev": "tsc --watch",
-		"format": "biome format --write .",
-		"lint": "biome lint .",
-		"lintfix": "biome lint --write .",
-		"check": "biome check --write .",
-		"test": "jest",
-		"test:watch": "jest --watch",
-		"test:cov": "jest --coverage"
-	},
-	"files": [
-		"dist"
-	],
-	"n8n": {
-		"n8nNodesApiVersion": 1,
-		"credentials": [
-			"dist/credentials/PterodactylClientApi.credentials.js",
-			"dist/credentials/PterodactylApplicationApi.credentials.js"
-		],
-		"nodes": [
-			"dist/nodes/Pterodactyl/Pterodactyl.node.js",
-			"dist/nodes/PterodactylClient/PterodactylClient.node.js",
-			"dist/nodes/PterodactylApplication/PterodactylApplication.node.js",
-			"dist/nodes/PterodactylWebsocketTrigger/PterodactylWebsocketTrigger.trigger.node.js",
-			"dist/nodes/PterodactylWebsocket/PterodactylWebsocket.node.js",
-			"dist/nodes/PterodactylApplicationTool/PterodactylServerManagementTool.node.js",
-			"dist/nodes/PterodactylApplicationTool/PterodactylUserManagementTool.node.js",
-			"dist/nodes/PterodactylApplicationTool/PterodactylLocationManagementTool.node.js",
-			"dist/nodes/PterodactylApplicationTool/PterodactylNodeManagementTool.node.js",
-			"dist/nodes/PterodactylApplicationTool/PterodactylNestManagementTool.node.js",
-			"dist/nodes/PterodactylClientTool/PterodactylServerControlTool.node.js",
-			"dist/nodes/PterodactylClientTool/PterodactylBackupManagementTool.node.js",
-			"dist/nodes/PterodactylClientTool/PterodactylFileManagementTool.node.js",
-			"dist/nodes/PterodactylClientTool/PterodactylNetworkManagementTool.node.js",
-			"dist/nodes/PterodactylClientTool/PterodactylScheduleManagementTool.node.js",
-			"dist/nodes/PterodactylClientTool/PterodactylStartupManagementTool.node.js",
-			"dist/nodes/PterodactylClientTool/PterodactylSubuserManagementTool.node.js"
-		]
-	},
-	"devDependencies": {
-		"@biomejs/biome": "2.3.11",
-		"@types/jest": "^29.5.0",
-		"@types/node": "^20.0.0",
-		"@types/ws": "^8.18.1",
-		"gulp": "^4.0.2",
-		"jest": "^29.0.0",
-		"n8n-workflow": "^1.0.0",
-		"ts-jest": "^29.0.0",
-		"typescript": "~5.2.0",
-		"yaml": "^2.8.1"
-	},
-	"peerDependencies": {
-		"n8n-workflow": "*"
-	},
-	"engines": {
-		"node": ">=18.10.0"
-	},
-	"dependencies": {
-		"ws": "^8.18.3"
-	}
+  "name": "n8n-ender-pterodactyl",
+  "version": "1.0.0",
+  "description": "custom n8n nodes for interacting with custom pterodactyl panels via api and websockets",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "format": "biome format --write .",
+    "lint": "biome lint .",
+    "lintfix": "biome lint --write .",
+    "check": "biome check --write .",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/PterodactylClientApi.credentials.js",
+      "dist/credentials/PterodactylApplicationApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Pterodactyl/Pterodactyl.node.js",
+      "dist/nodes/PterodactylClient/PterodactylClient.node.js",
+      "dist/nodes/PterodactylApplication/PterodactylApplication.node.js",
+      "dist/nodes/PterodactylWebsocketTrigger/PterodactylWebsocketTrigger.trigger.node.js",
+      "dist/nodes/PterodactylWebsocket/PterodactylWebsocket.node.js",
+      "dist/nodes/PterodactylApplicationTool/PterodactylServerManagementTool.node.js",
+      "dist/nodes/PterodactylApplicationTool/PterodactylUserManagementTool.node.js",
+      "dist/nodes/PterodactylApplicationTool/PterodactylLocationManagementTool.node.js",
+      "dist/nodes/PterodactylApplicationTool/PterodactylNodeManagementTool.node.js",
+      "dist/nodes/PterodactylApplicationTool/PterodactylNestManagementTool.node.js",
+      "dist/nodes/PterodactylClientTool/PterodactylServerControlTool.node.js",
+      "dist/nodes/PterodactylClientTool/PterodactylBackupManagementTool.node.js",
+      "dist/nodes/PterodactylClientTool/PterodactylFileManagementTool.node.js",
+      "dist/nodes/PterodactylClientTool/PterodactylNetworkManagementTool.node.js",
+      "dist/nodes/PterodactylClientTool/PterodactylScheduleManagementTool.node.js",
+      "dist/nodes/PterodactylClientTool/PterodactylStartupManagementTool.node.js",
+      "dist/nodes/PterodactylClientTool/PterodactylSubuserManagementTool.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.3.11",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.0.0",
+    "@types/ws": "^8.18.1",
+    "gulp": "^4.0.2",
+    "jest": "^29.0.0",
+    "n8n-workflow": "^1.0.0",
+    "ts-jest": "^29.0.0",
+    "typescript": "~5.2.0",
+    "yaml": "^2.8.1"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  },
+  "engines": {
+    "node": ">=18.10.0"
+  },
+  "dependencies": {
+    "ws": "^8.18.3"
+  }
 }
