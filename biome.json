@@ -39,7 +39,7 @@
       "suspicious": {
         "noUnknownAtRules": "off",
         "noConsole": "warn",
-        "noExplicitAny": "warn",
+        "noExplicitAny": "off",
         "noShadowRestrictedNames": "error"
       },
       "correctness": {
