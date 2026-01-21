@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-ender-pterodactyl",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "custom n8n nodes for interacting with custom pterodactyl panels via api and websockets",
   "license": "MIT",
   "main": "index.js",
@@ -46,20 +46,7 @@
       "dist/nodes/PterodactylClient/EnderPterodactylClient.node.js",
       "dist/nodes/PterodactylApplication/EnderPterodactylApplication.node.js",
       "dist/nodes/PterodactylWebsocketTrigger/EnderPterodactylWebsocketTrigger.trigger.node.js",
-      "dist/nodes/PterodactylWebsocket/EnderPterodactylWebsocket.node.js",
-      "dist/nodes/PterodactylApplicationTool/PterodactylServerManagementTool.node.js",
-      "dist/nodes/PterodactylApplicationTool/PterodactylUserManagementTool.node.js",
-      "dist/nodes/PterodactylApplicationTool/PterodactylLocationManagementTool.node.js",
-      "dist/nodes/PterodactylApplicationTool/PterodactylNodeManagementTool.node.js",
-      "dist/nodes/PterodactylApplicationTool/PterodactylNestManagementTool.node.js",
-      "dist/nodes/PterodactylClientTool/PterodactylServerControlTool.node.js",
-      "dist/nodes/PterodactylClientTool/PterodactylBackupManagementTool.node.js",
-      "dist/nodes/PterodactylClientTool/PterodactylFileManagementTool.node.js",
-      "dist/nodes/PterodactylClientTool/PterodactylNetworkManagementTool.node.js",
-      "dist/nodes/PterodactylClientTool/PterodactylScheduleManagementTool.node.js",
-      "dist/nodes/PterodactylClientTool/PterodactylStartupManagementTool.node.js",
-      "dist/nodes/PterodactylClientTool/PterodactylSubuserManagementTool.node.js",
-      "dist/nodes/PterodactylClientTool/PterodactylDatabaseManagementTool.node.js"
+      "dist/nodes/PterodactylWebsocket/EnderPterodactylWebsocket.node.js"
     ]
   },
   "devDependencies": {
