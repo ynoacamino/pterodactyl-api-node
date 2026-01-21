@@ -30,7 +30,7 @@ export async function listNestEggs(
     this,
     "GET",
     "/api/application",
-    `/nests/${nestId}/eggs`,
+    `/nests/${nestId}/eggs?include=variables`,
     {},
     {},
     {},

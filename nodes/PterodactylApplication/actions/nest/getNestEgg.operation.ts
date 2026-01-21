@@ -49,7 +49,7 @@ export async function getNestEgg(
     this,
     "GET",
     "/api/application",
-    `/nests/${nestId}/eggs/${eggId}`,
+    `/nests/${nestId}/eggs/${eggId}?include=variables`,
     {},
     {},
     {},
